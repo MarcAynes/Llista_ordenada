@@ -55,7 +55,7 @@ void PDI_escriu(Llista_PDI *llista, int numero){
     }
 }
 
-Node PDI_llegeix(Llista_PDI llista){
+int PDI_llegeix(Llista_PDI llista){
     Node aux;
     if(llista.ant->seg != NULL && llista.ant != NULL){
         aux.Numero = llista.ant->seg->Numero;
@@ -67,7 +67,7 @@ Node PDI_llegeix(Llista_PDI llista){
         aux.ant = NULL;
         aux.Numero = 0;
     }
-    return aux;
+    return aux.Numero;
 }
 
 void PDI_retrocedeix(Llista_PDI *llista){
