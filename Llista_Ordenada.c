@@ -69,3 +69,7 @@ Node PDI_llegeix(Llista_PDI llista){
     }
     return aux;
 }
+
+void PDI_retrocedeix(Llista_PDI *llista){
+    llista->ant = llista->ant->ant;
+}
