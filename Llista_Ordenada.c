@@ -22,3 +22,35 @@ void PDI_avanca(Llista_PDI *llista){
 void PDI_vesInici(Llista_PDI *llista){
     (*llista).ant = (*llista).pri;
 }
+
+void PDI_escriu(Llista_PDI *llista, int numero){
+    Node *aux;
+    int trobat;
+    trobat = 0;
+    PDI_vesInici(llista);
+    while(llista->ant->seg != NULL && !trobat){
+        if(llista->ant->seg->Numero <= numero){
+            trobat = 1;
+        }
+        else{
+            PDI_avanca(llista);
+        }
+    }
+
+    if(!trobat){
+        aux = (Node *)malloc(sizeof(Node));
+        aux->Numero = numero;
+        aux->seg = NULL;
+        aux->ant = NULL;
+        aux->ant = llista->ant;
+        llista->ant->seg = aux;
+    }
+    else{
+      aux = (Node *)malloc(sizeof(Node));
+      aux->Numero = numero;
+      aux->seg = llista->ant->seg;
+      aux->ant = llista->ant;
+      llista->ant->seg->ant = aux;
+      
+    }
+}
