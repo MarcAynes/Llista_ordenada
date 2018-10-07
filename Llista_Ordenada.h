@@ -16,7 +16,7 @@ typedef struct{
 
 Llista_PDI PDI_crea();
 
-void PDI_escriu(Llista_PDI *llista, int X, int Y);
+void PDI_escriu(Llista_PDI *llista, int Numero);
 
 void PDI_avanca(Llista_PDI *llista);
 
