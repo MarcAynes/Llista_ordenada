@@ -1,6 +1,6 @@
 #ifndef _LLISTA_PDI_
 #define _LLISTA_PDI_
-
+#include<stdlib.h>
 #include<stdio.h>
 
 typedef struct N{
@@ -22,7 +22,7 @@ void PDI_avanca(Llista_PDI *llista);
 
 void PDI_retrocedeix(Llista_PDI *llista);
 
-Node PDI_llegeix(Llista_PDI llista);
+int PDI_llegeix(Llista_PDI llista);
 
 void PDI_destrueix(Llista_PDI *llista);
 

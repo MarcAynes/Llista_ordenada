@@ -1,13 +1,14 @@
-#include<stdio.h>
-#include"Llista_PDI"
+#include <stdio.h>
+#include <stdlib.h>
+#include "Llista_Ordenada.h"
 void main(){
   Llista_PDI llista;
   llista = PDI_crea();
   printf("\ncreada la llista bidirecional\n");
-  PDI_escriu(&llista, 5);
-  printf("\nafegim a la llista el nuero 5\n");
   PDI_escriu(&llista, 10);
   printf("\nafegim a la llista el nuero 10\n");
+  PDI_escriu(&llista, 5);
+  printf("\nafegim a la llista el nuero 5\n");
   PDI_vesInici(&llista);
   printf("\nllegim els numeros afegits\n");
   printf("%d\n", PDI_llegeix(llista));
