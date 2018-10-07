@@ -73,3 +73,16 @@ Node PDI_llegeix(Llista_PDI llista){
 void PDI_retrocedeix(Llista_PDI *llista){
     llista->ant = llista->ant->ant;
 }
+
+void PDI_destrueix(Llista_PDI *llista){
+    Node *aux;
+    PDI_vesInici(llista);
+    while((*(*llista).ant).seg != NULL){
+        aux = (*(*llista).ant).seg;
+        free((*llista).ant);
+        (*llista).ant = aux;
+    }
+    free((*llista).ant);
+    (*llista).ant = (*llista).pri = NULL;
+    free(llista);
+}
