@@ -15,3 +15,11 @@ Llista_PDI PDI_crea(){
     }
     return llista;
 }
+
+void PDI_avanca(Llista_PDI *llista){
+    llista->ant = llista->ant->seg;
+}
+
+void PDI_vesInici(Llista_PDI *llista){
+    (*llista).ant = (*llista).pri;
+}
