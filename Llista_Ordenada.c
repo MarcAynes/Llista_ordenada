@@ -9,9 +9,8 @@ Llista_PDI PDI_crea(){
         printf("\n\aError en la inisialitzacio del programa\n");
     }
     else{
-        llista.ant->seg = NULL;
-        llista.ant->X = -1;
-        llista.ant->Y = -1;
+        llista.ant->seg = llista.ant->ant = NULL;
+        llista.ant->Numero = 0;
     }
     return llista;
 }
